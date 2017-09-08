@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+  <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js ">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js">
+  </script>
+
+
+  <link rel='stylesheet' type 'text/css' href="{{url_for('static',filename='styles2.css')}}">
+
+  <script type='text/javascript' src="{{ url_for('static', filename = 'js/colorServer.js')}}"></script>
+  <title>first temp</title>
+</head>
+
+
+<body style="background:rgb({{red_color}},{{green_color}},{{blue_color}});">
+
+  <div class="form-group container col-12 col-sm-6 col-md-8">
+    <h1 style="color:rgb({{blue_color}},{{red_color}},{{green_color}})">Enter your color values below</h1>
+    <form action='/' method='post'>
+      Red: <input type='number' class="form-control container" name='red_color' min='1' max='255'>
+      <br> Green: <input type='number' class="form-control container" name='green_color' min='1' max='255'>
+      <br> Blue: <input type='number' class="form-control container" name='blue_color' min='1' max='255'><br>
+      <input type='submit' class="btn btn-primary" style="background-color:rgb({{green_color}},{{blue_color}},{{red_color}})" value='Show my color'>
+
+      <!-- <div class="form-group row">
+        <label for="example-color-input" class="col-2 col-form-label">Color Picker</label>
+        <div class="col-10">
+          <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+        </div>
+      </div> -->
+  </div>
+
+
+  </form>
+</body>
+
+</html>
